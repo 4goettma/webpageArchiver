@@ -2,12 +2,12 @@
 
 """
     Dependencies:
-    
+
     Chrome
     Chromedriver
     python-selenium
 
-""" 
+"""
 import time, os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
