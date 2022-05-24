@@ -13,8 +13,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 options = webdriver.ChromeOptions()
-options.add_argument('headless')
+#options.add_argument('headless')
 options.add_argument('window-size=1920x800')
+
+# https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja
+options.add_extension(extension='addons/I-don-t-care-about-cookies.crx')
+# https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+options.add_extension(extension='addons/uBlock-Origin.crx')
+
 browser = webdriver.Chrome(options=options)
 
 # https://stackoverflow.com/a/3277516
